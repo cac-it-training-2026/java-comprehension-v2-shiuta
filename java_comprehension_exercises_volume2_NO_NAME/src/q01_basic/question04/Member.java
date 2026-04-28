@@ -2,7 +2,7 @@ package q01_basic.question04;
 
 class Member {
 	private int id;
-	private String passward;
+	private String password;
 	private String name;
 	private int age;
 	private int rank;
@@ -15,12 +15,12 @@ class Member {
 		this.id = id;
 	}
 
-	public String getPassward() {
-		return passward;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setPassward(String passward) {
-		this.passward = passward;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public String getName() {
@@ -51,9 +51,9 @@ class Member {
 
 	}
 
-	public Member(int id, String passward, String name, int age, int rank) {
+	public Member(int id, String password, String name, int age, int rank) {
 		this.id = id;
-		this.passward = passward;
+		this.password = password;
 		this.name = name;
 		this.age = age;
 		this.rank = rank;
@@ -63,7 +63,7 @@ class Member {
 		System.out.println("---SHOW DATA---");
 		System.out.println("***MEMBER DATA***");
 		System.out.println("id:" + id);
-		System.out.println("passward:" + passward);
+		System.out.println("password:" + password);
 		System.out.println("name:" + name);
 		System.out.println("age:" + age);
 		System.out.println("rank:" + rank);

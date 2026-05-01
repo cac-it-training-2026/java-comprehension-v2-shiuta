@@ -6,6 +6,16 @@ public class SystemMain05 {
 
 		AbstMember[] members = new AbstMember[2];
 		//TODO ここから実装する
+		NonMember nonMember = new NonMember("Sato Kensuke");
+		members[0] = nonMember;
+
+		Member member = new Member(1, "Passw0rd", "Miura Manabu", 28, 2);
+		members[1] = member;
+
+		MemberManager.showAllMembers(members);
+
+		nonMember.buyItem();
+		member.buyItem();
 
 	}
 

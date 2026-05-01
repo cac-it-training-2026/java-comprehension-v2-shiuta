@@ -1,4 +1,7 @@
-package q01_basic.question04;
+package q02_advanced.question01;
+
+import java.util.ArrayList;
+import java.util.List;
 
 class Member {
 	private int id;
@@ -6,6 +9,7 @@ class Member {
 	private String name;
 	private int age;
 	private int rank;
+	private List<Coupon> coupons;
 
 	public int getId() {
 		return id;
@@ -47,6 +51,14 @@ class Member {
 		this.rank = rank;
 	}
 
+	public List<Coupon> getCoupons() {
+		return coupons;
+	}
+
+	public void setCoupons(List<Coupon> coupons) {
+		this.coupons = coupons;
+	}
+
 	public Member() {
 
 	}
@@ -54,18 +66,24 @@ class Member {
 	public Member(int id, String password, String name, int age, int rank) {
 		this.id = id;
 		this.password = password;
-		//		this.name = name;
+		this.name = name;
 		this.age = age;
 		this.rank = rank;
+		this.coupons = new ArrayList<>();
+
+		coupons.add(new Coupon(1, 0.5, "最初の特典"));
+		coupons.add(new Coupon(2, 0.25, "今月の特典"));
+	}
+
+	@Override
+	public String toString() {
+		return "Member [id=" + id + ", password=" + password + ", name=" + name + ", age=" + age + ", rank=" + rank
+				+ ", coupons=" + coupons + "]";
 	}
 
 	public void showMember() {
-		System.out.println("---SHOW DATA---");
-		System.out.println("***MEMBER DATA***");
-		System.out.println("id:" + id);
-		System.out.println("password:" + password);
-		System.out.println("name:" + name);
-		System.out.println("age:" + age);
-		System.out.println("rank:" + rank);
+		System.out.println(toString());
+		System.out.println("******************");
 	}
+
 }
